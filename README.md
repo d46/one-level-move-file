@@ -60,6 +60,11 @@ const result = [
 | destination | string           | Id of the folder to be moved |
 
 
+### List shape
+| Key   | Type           | Description                 |
+|-------|----------------|-----------------------------|
+| index | Folder         | Unique identifier of folder |
+
 ### Folder shape
 
 | Key   | Type           | Description                 |
