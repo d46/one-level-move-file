@@ -6,9 +6,9 @@ import WrongSourceError from './errors/wrong-source.error';
 import WrongDestinationError from './errors/wrong-destination.error';
 
 export default function move(list: List, source: string, destination: string): List {
-  const listReference = list;
-  let destinationIndex = null;
-  let sourceReference = null;
+  const listReference: List = list;
+  let destinationIndex: number | null = null;
+  let sourceReference: FileItem | null = null;
 
   for (let i = 0; i < list.length; i += 1) {
     const folder: Folder = list[i];
@@ -21,7 +21,7 @@ export default function move(list: List, source: string, destination: string): L
       destinationIndex = i;
     }
 
-    const newFileItems = [];
+    const newFileItems: FileItem[] = [];
     for (let t = 0; t < folder.files.length; t += 1) {
       const file: FileItem = folder.files[t];
 
